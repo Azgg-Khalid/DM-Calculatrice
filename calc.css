@@ -1,0 +1,85 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: rgba(4, 64, 142, 0.667);
+}
+
+
+
+.grid-main {
+  display: grid;
+  place-content: center;
+  text-align: center;
+  min-height: 100vh;
+
+  grid-template-areas:
+  "ecran ecran"
+  "AC DEL"
+  "chiffres operations";
+
+  grid-template-columns: 300px 150px;
+  grid-template-rows: 100px;
+  gap: 2px;
+}
+
+.grid-ecran{
+  grid-area: ecran;
+  display: grid;
+  grid-auto-flow: column;
+  text-align: end;
+
+}
+
+.grid-AC{
+  grid-area: AC;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto ;
+  background: local;
+
+}
+
+.grid-DEL{
+  grid-area: DEL;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto ;
+}
+
+
+.grid-chiffres {
+  grid-area: chiffres;
+}
+
+.grid-chiffres {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+}
+
+.grid-operations {
+  grid-area: operations
+}
+
+.grid-operations {
+  display: grid;
+}
+
+.grid-main div {
+  /* display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%; */
+  cursor: pointer;
+  font-size: 3rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(89, 3, 151, 0.337);
+}
